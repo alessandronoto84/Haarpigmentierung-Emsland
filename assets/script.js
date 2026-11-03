@@ -1,5 +1,5 @@
 // >>> Hier deine WhatsApp-Nummer eintragen (Ländercode ohne +, ohne führende 0), z. B. "4915112345678"
-const WHATSAPP_NUMBER = "49XXXXXXXXXXX";
+const WHATSAPP_NUMBER = "491738072405";
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
