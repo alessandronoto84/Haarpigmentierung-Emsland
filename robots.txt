@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://haarpigmentierung-emsland.de/sitemap.xml

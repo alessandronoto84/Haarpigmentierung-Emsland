@@ -7,5 +7,10 @@ Statische One-Page-Website (HTML/CSS/JS, kein Build nötig). Einfach `index.html
 - Fotos: siehe `assets/img/README.md`
 - Impressum & Datenschutz vervollständigen
 
-## Hosting
-Läuft auf jedem Webspace oder kostenlos über GitHub Pages / Netlify.
+## Hosting (STRATO)
+Domain: https://haarpigmentierung-emsland.de
+
+Per FTP/SFTP oder STRATO-Datei-Manager ins Hauptverzeichnis der Domain hochladen:
+`index.html`, `impressum.html`, `datenschutz.html`, `.htaccess`, `robots.txt`, `sitemap.xml` und den kompletten Ordner `assets/`.
+
+Wichtig: Die `.htaccess` (leitet auf https um) erst hochladen, wenn SSL bei STRATO aktiviert ist.

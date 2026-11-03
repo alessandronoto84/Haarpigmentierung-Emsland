@@ -1,0 +1,5 @@
+# Immer auf https://haarpigmentierung-emsland.de (ohne www) umleiten
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://haarpigmentierung-emsland.de%{REQUEST_URI} [L,R=301]
