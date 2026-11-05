@@ -223,3 +223,4 @@ details p { color: var(--muted); margin: 12px 0 0; }
 .process-strip figcaption { font-size: .92rem; color: var(--muted); margin-top: 10px; }
 .process-strip strong { color: var(--text); }
 @media (max-width: 860px) { .process-strip { grid-template-columns: 1fr; } }
+.ig-card { aspect-ratio: auto; min-height: 100%; }
