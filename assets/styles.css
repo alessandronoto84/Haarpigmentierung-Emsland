@@ -379,3 +379,8 @@ html.intro-on { overflow: hidden; }
 .hero-services li > span::before { content: "✓" !important; width: auto !important; height: auto !important; border-radius: 0 !important; background: none !important; box-shadow: none !important; color: var(--blue); font-weight: 600; }
 @media (max-width: 1080px) { .hero-services ul { grid-template-columns: repeat(2, max-content); column-gap: 32px; } }
 @media (max-width: 860px) { .hero-services li > span { font-size: .98rem; } }
+/* Haken unter den Buttons: sauber in 2 Spalten */
+.trust { display: grid; grid-template-columns: repeat(2, max-content); gap: 10px 28px; }
+.trust li { white-space: nowrap; }
+@media (max-width: 420px) { .trust { column-gap: 16px; font-size: .84rem; } }
+@media (max-width: 379px) { .trust { grid-template-columns: 1fr 1fr; } .trust li { white-space: normal; } }
