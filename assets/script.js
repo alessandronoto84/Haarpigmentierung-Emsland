@@ -4,6 +4,25 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
+/* ---------- Logo-Intro beim Öffnen ---------- */
+(function intro() {
+  if (reduceMotion) return;
+  const el = document.createElement("div");
+  el.className = "intro";
+  el.setAttribute("aria-hidden", "true");
+  el.innerHTML = '<div class="intro-logo"><img src="assets/img/logo.png" alt=""><span class="intro-shine"></span></div><div class="intro-dots"><i></i><i></i><i></i><i></i></div>';
+  document.body.appendChild(el);
+  document.documentElement.classList.add("intro-on");
+  const done = () => {
+    if (!el.isConnected) return;
+    el.classList.add("out");
+    document.documentElement.classList.remove("intro-on");
+    setTimeout(() => el.remove(), 700);
+  };
+  el.addEventListener("click", done);
+  setTimeout(done, 1700);
+})();
+
 /* ---------- Mobiles Menü ---------- */
 const toggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".nav-links");
