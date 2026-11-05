@@ -1,11 +1,12 @@
 # Bilder
 
-- `logo.png` – Logo (aus der Werbegrafik ausgeschnitten)
-- `ergebnis-4-sitzung.jpg` – Ergebnis nach der 4. Sitzung (Startbereich + Galerie)
-- `pigmentierung-arbeit.jpg` – Bei der Arbeit (Galerie + Über mich)
-- `logo-instagram.jpg` – Instagram-Profilbild (Favicon / Vorschaubild)
+Verwendet auf der Seite:
+- `logo.png` – Logo
+- `logo-instagram.jpg` – Browser-Symbol / Vorschaubild beim Teilen
+- `ergebnis-4-sitzung.jpg` – Titelbild
+- `kunde-vorne.jpg`, `kunde-seite.jpg` – Ergebnis „Neue Haarlinie“
+- `pigmentierung-arbeit.jpg`, `spiegel.jpg`, `kunde-nah.jpg` – Bildreihe Ergebnisse
+- `behandlung-studio.jpg` – Über mich
 
-Neue Bilder: max. ca. 1200 px breit, quadratisch, als JPG hier ablegen und in index.html in die Galerie eintragen.
-- `lichtes-haar-vorher.jpg` / `lichtes-haar-nachher.jpg` – Vorher/Nachher-Paar 1
-- `glatze-vorher.jpg` / `glatze-nachher.jpg` – Vorher/Nachher-Paar 2
-- `haarlinie-seitlich.jpg`, `lichtes-haar-ergebnis.jpg`, `haarlinie-aufbau.jpg`, `direkt-nach-sitzung.jpg` – Galerie „Weitere Ergebnisse“
+Ältere, aussortierte Bilder liegen noch in der Git-Historie.
+Neue Bilder: quadratisch, ca. 900–1200 px, als JPG hier ablegen.
