@@ -384,3 +384,34 @@ html.intro-on { overflow: hidden; }
 .trust li { white-space: nowrap; }
 @media (max-width: 420px) { .trust { column-gap: 16px; font-size: .84rem; } }
 @media (max-width: 379px) { .trust { grid-template-columns: 1fr 1fr; } .trust li { white-space: normal; } }
+
+/* ================= Alternative zur Haartransplantation ================= */
+.vs-section { background: var(--navy-deep); color: #fff; }
+.vs-section h2 { color: #fff; max-width: 760px; }
+.lead-dark { color: #c9cde6; max-width: 760px; font-size: 1.08rem; }
+.vs-table { margin-top: 36px; display: grid; gap: 10px; }
+.vs-row { display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+.vs-head > div { font-weight: 600; font-size: .95rem; padding: 0 18px 4px; }
+.vs-col-ht { color: #9aa0c0; }
+.vs-col-smp { color: var(--blue); }
+.vs-label { font-family: "Playfair Display", "Noto Kufi Arabic", serif; font-weight: 600; font-size: 1.05rem; align-self: center; }
+.vs-cell { display: flex; gap: 12px; align-items: flex-start; border-radius: 12px; padding: 16px 18px; font-size: .95rem; line-height: 1.5; }
+.vs-ht { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); color: #b4b9d6; }
+.vs-smp { background: rgba(0,157,226,.14); border: 1px solid rgba(0,157,226,.45); color: #fff; }
+.vs-mark { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: .75rem; font-weight: 700; }
+.vs-ht .vs-mark { background: rgba(255,255,255,.1); color: #9aa0c0; }
+.vs-smp .vs-mark { background: var(--blue); color: #fff; }
+.vs-row:not(.vs-head) { transition: transform .3s; }
+.vs-row:not(.vs-head):hover .vs-smp { box-shadow: 0 0 0 1px var(--blue), 0 10px 30px rgba(0,157,226,.25); }
+@media (max-width: 760px) {
+  .vs-head { display: none; }
+  .vs-row { grid-template-columns: 1fr 1fr; }
+  .vs-label { grid-column: 1 / -1; margin-top: 10px; }
+  .vs-cell { flex-direction: column; gap: 8px; font-size: .88rem; padding: 14px; }
+  .vs-tag { display: block !important; font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+  .vs-ht .vs-tag { color: #9aa0c0; } .vs-smp .vs-tag { color: #7fd0f5; }
+  .vs-cell .vs-mark { display: none; }
+}
+.vs-tag { display: none; }
+.nav-links a { white-space: nowrap; }
+@media (max-width: 1240px) { .nav-links { gap: 14px; } .nav-links a:not(.btn) { font-size: .88rem; } .nav-right { gap: 14px; } }
