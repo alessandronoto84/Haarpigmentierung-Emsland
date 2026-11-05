@@ -224,3 +224,7 @@ details p { color: var(--muted); margin: 12px 0 0; }
 .process-strip strong { color: var(--text); }
 @media (max-width: 860px) { .process-strip { grid-template-columns: 1fr; } }
 .ig-card { aspect-ratio: auto; min-height: 100%; }
+.gallery-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0; }
+.gallery-4 .ig-tile { padding: 24px; }
+.gallery-4 .ig-tile strong { font-size: 1.35rem; }
+@media (max-width: 860px) { .gallery-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
