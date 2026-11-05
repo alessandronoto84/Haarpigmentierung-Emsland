@@ -2,6 +2,13 @@
 // Schlüssel = data-i18n-Attribut im HTML.
 window.I18N = {
   en: {
+    hs_title: "I can help with",
+    hs1: "Thinning hair",
+    hs2: "Bald patches",
+    hs3: "Baldness",
+    hs4: "Receding hairline",
+    hs5: "Gaps in the beard",
+    hs6: "Scars",
     _title: "Haarpigmentierung Emsland – Fuller-looking hair without surgery",
     nav_who: "Who is it for?",
     nav_method: "Method",
@@ -112,6 +119,13 @@ window.I18N = {
   },
 
   tr: {
+    hs_title: "Yardımcı olduğum konular",
+    hs1: "Seyrek saç",
+    hs2: "Kel bölgeler",
+    hs3: "Kellik",
+    hs4: "Açılmalar",
+    hs5: "Sakaldaki boşluklar",
+    hs6: "Yara izleri",
     _title: "Haarpigmentierung Emsland – Ameliyatsız daha gür görünen saçlar",
     nav_who: "Kimler için?",
     nav_method: "Yöntem",
@@ -222,6 +236,13 @@ window.I18N = {
   },
 
   ar: {
+    hs_title: "أساعدك في",
+    hs1: "الشعر الخفيف",
+    hs2: "المناطق الصلعاء",
+    hs3: "الصلع",
+    hs4: "انحسار مقدمة الشعر",
+    hs5: "فراغات اللحية",
+    hs6: "الندوب",
     _title: "Haarpigmentierung Emsland – شعر أكثف مظهرًا دون جراحة",
     nav_who: "لمن؟",
     nav_method: "الطريقة",
