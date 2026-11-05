@@ -1,10 +1,8 @@
 # Bilder
 
-Hier eigene Fotos ablegen (Vorher/Nachher, Studio, Portrait).
-Dateinamen, die die Seite erwartet (ersetzen die Platzhalter automatisch, sobald im HTML eingetragen):
+- `logo.png` – Logo (aus der Werbegrafik ausgeschnitten)
+- `ergebnis-4-sitzung.jpg` – Ergebnis nach der 4. Sitzung (Startbereich + Galerie)
+- `pigmentierung-arbeit.jpg` – Bei der Arbeit (Galerie + Über mich)
+- `logo-instagram.jpg` – Instagram-Profilbild (Favicon / Vorschaubild)
 
-- `hero.jpg` – großes Titelbild
-- `portrait.jpg` – Foto von dir
-- `vorher-nachher-1.jpg` … `vorher-nachher-6.jpg` – Ergebnisse
-
-Tipp: Bilder vorher auf max. 1600 px Breite verkleinern (z. B. squoosh.app).
+Neue Bilder: max. ca. 1200 px breit, quadratisch, als JPG hier ablegen und in index.html in die Galerie eintragen.
