@@ -415,3 +415,5 @@ html.intro-on { overflow: hidden; }
 .vs-tag { display: none; }
 .nav-links a { white-space: nowrap; }
 @media (max-width: 1240px) { .nav-links { gap: 14px; } .nav-links a:not(.btn) { font-size: .88rem; } .nav-right { gap: 14px; } }
+.hero .lead strong { color: #fff; }
+.nav { gap: 24px; } @media (max-width: 1240px) and (min-width: 861px) { .logo img { height: 34px; } }
