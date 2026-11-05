@@ -201,3 +201,15 @@ details p { color: var(--muted); margin: 12px 0 0; }
   .hero-grid { grid-template-columns: 1fr; gap: 36px; }
   .logo img { height: 32px; }
 }
+
+/* Vorher / Nachher */
+.ba-list { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 30px 0 40px; }
+.ba { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 14px 22px; box-shadow: 0 6px 24px rgba(34,35,74,.06); }
+.ba-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 16px; }
+.ba-imgs figure { margin: 0; position: relative; }
+.ba-imgs img { aspect-ratio: 1; object-fit: cover; width: 100%; border-radius: 10px; }
+.ba h3, .ba p { margin-left: 8px; margin-right: 8px; }
+.ba p { margin-bottom: 0; }
+.tag { position: absolute; left: 8px; top: 8px; background: rgba(27,28,61,.85); color: #fff; font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+.tag-after { background: var(--blue); }
+@media (max-width: 860px) { .ba-list { grid-template-columns: 1fr; } }
