@@ -350,4 +350,4 @@ html.intro-on { overflow: hidden; }
 .js { --intro: 1.75s; }
 @media (prefers-reduced-motion: reduce) { .js { --intro: 0s; } }
 .logo img { animation: fadeUp .8s ease calc(var(--intro, 0s) + .1s) both; }
-.about-img { max-width: 380px; width: 100%; justify-self: center; }
+.about-img { max-width: 340px; width: 100%; justify-self: center; }
