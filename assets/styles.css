@@ -232,3 +232,6 @@ details p { color: var(--muted); margin: 12px 0 0; }
 .ba-wide .ba-imgs { gap: 10px; }
 .gallery-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0; }
 @media (max-width: 860px) { .gallery-3 { grid-template-columns: 1fr; } .ba-3 { grid-template-columns: 1fr; } }
+.cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 860px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
