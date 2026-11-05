@@ -373,3 +373,9 @@ html.intro-on { overflow: hidden; }
   .hero-services li > span { font-size: .88rem; padding: 7px 14px 7px 10px; }
 }
 .hero h1 { font-size: clamp(2.2rem, 4.1vw, 3.2rem); }
+/* "Ich helfe bei" als schlichte Liste */
+.hero-services ul { display: grid !important; gap: 12px; }
+.hero-services li > span { display: flex; align-items: center; gap: 10px; background: none !important; border: 0 !important; border-radius: 0; padding: 0 !important; color: #fff; font-size: 1.05rem; font-weight: 500; white-space: nowrap; }
+.hero-services li > span::before { content: "✓" !important; width: auto !important; height: auto !important; border-radius: 0 !important; background: none !important; box-shadow: none !important; color: var(--blue); font-weight: 600; }
+@media (max-width: 1080px) { .hero-services ul { grid-template-columns: repeat(2, max-content); column-gap: 32px; } }
+@media (max-width: 860px) { .hero-services li > span { font-size: .98rem; } }
