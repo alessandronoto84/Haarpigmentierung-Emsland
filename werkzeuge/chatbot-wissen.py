@@ -65,7 +65,7 @@ def bau(L):
         faq.append(e)
 
     kontakt_links = [{'t': 'WhatsApp', 'h': wa}, {'t': 'Anrufen' if de else 'Call', 'h': f'tel:{tel.group(1)}'},
-                     {'t': 'E-Mail', 'h': f'mailto:{mail}'}, {'t': 'Kontakt' if de else 'Contact', 'h': '#kontakt'}]
+                     {'t': 'E-Mail', 'h': f'mailto:{mail}'}, {'t': 'Kontakt' if de else 'Contact', 'h': 'index.html#kontakt'}]
     S = {  # Vorschläge
         'was': 'Was ist eine Haarpigmentierung?' if de else 'What is scalp micropigmentation?',
         'preis': 'Was kostet das?' if de else 'How much does it cost?',
@@ -81,11 +81,11 @@ def bau(L):
     F('was', S['was'],
       f"{T(L, 'hero_title')}\n{T(L, 'hero_lead')}\n{T(L, 'm_intro')}",
       ['haarpigmentierung', 'pigmentierung', 'smp', 'scalp', 'micropigmentation', 'mikropigmentierung', 'was ist', 'what is', 'methode', 'method', 'funktioniert', 'works', 'haare', 'hair'],
-      [{'t': 'Methode' if de else 'Method', 'h': '#methode'}], [S['ablauf'], S['preis'], S['weh']])
+      [{'t': 'Methode' if de else 'Method', 'h': 'index.html#methode'}], [S['ablauf'], S['preis'], S['weh']])
     F('fuerwen', 'Für wen?' if de else 'Who is it for?',
       T(L, 'who_title') + '\n' + liste(f"{T(L, f'c{i}_t')}: {T(L, f'c{i}_p')}" for i in range(1, 7)),
       ['für wen', 'who', 'geeignet', 'suitable', 'richtige', 'right', 'kandidat', 'candidate'],
-      [{'t': 'Für wen?' if de else 'Who is it for?', 'h': '#fuer-wen'}], [S['was'], S['kontakt']])
+      [{'t': 'Für wen?' if de else 'Who is it for?', 'h': 'index.html#fuer-wen'}], [S['was'], S['kontakt']])
     for i, kw in zip(range(1, 7), [
         ['licht', 'lichtes', 'dünn', 'dünnes', 'thinning', 'thin', 'kopfhaut', 'scalp', 'schimmert'],
         ['glatze', 'bald', 'geheimratsecken', 'receding', 'haarlinie', 'hairline', 'kahl'],
@@ -97,16 +97,16 @@ def bau(L):
     F('vergleich', T(L, 'v_title'),
       T(L, 'v_intro') + '\n' + liste(f"{T(L, f'v_r{i}')}: {T(L, 'v_h_ht')}: {T(L, f'v_t{i}')} | {T(L, 'v_h_smp')}: {T(L, f'v_p{i}')}" for i in range(1, 6)),
       ['haartransplantation', 'transplantation', 'transplant', 'vergleich', 'compare', 'unterschied', 'difference', 'statt op', 'operation', 'surgery', 'besser', 'better', 'alternative'],
-      [{'t': T(L, 'nav_alt'), 'h': '#alternative'}], [S['preis'], S['ablauf']])
+      [{'t': T(L, 'nav_alt'), 'h': 'index.html#alternative'}], [S['preis'], S['ablauf']])
     F('methode', T(L, 'm_title'),
       T(L, 'm_intro') + '\n' + liste(T(L, f'm_f{i}') for i in range(1, 5)) + '\n' +
       ', '.join(x for x in [f"{T(L, 's1_v')} {T(L, 's1_l')}", f"{T(L, 's2_v')} {T(L, 's2_l')}", T(L, 's3_l'), f"{T(L, 's4_v')} {T(L, 's4_l')}"] if x.strip()),
       ['4d', 'technik', 'technique', 'farbtöne', 'colours', 'colors', 'punkte', 'dots', 'sitzungen', 'sessions', 'sitzung', 'session', 'dauer', 'stunden', 'hours', 'wie lange dauert', 'how long'],
-      [{'t': 'Methode' if de else 'Method', 'h': '#methode'}], [S['ablauf'], S['weh']])
+      [{'t': 'Methode' if de else 'Method', 'h': 'index.html#methode'}], [S['ablauf'], S['weh']])
     F('ablauf', S['ablauf'],
       T(L, 'p_title') + '\n' + liste(f"{T(L, f'p{i}_t')}: {T(L, f'p{i}_p')}" for i in range(1, 5)),
       ['ablauf', 'process', 'schritte', 'steps', 'beratung', 'consultation', 'erstberatung', 'farbtest', 'test', 'termin', 'appointment', 'nachsorge', 'aftercare', 'wie läuft'],
-      [{'t': 'Ablauf' if de else 'Process', 'h': '#ablauf'}], [S['preis'], S['pflege'], S['kontakt']])
+      [{'t': 'Ablauf' if de else 'Process', 'h': 'index.html#ablauf'}], [S['preis'], S['pflege'], S['kontakt']])
     F('ueber', T(L, 'a_title'), f"{T(L, 'a_p1')}\n{T(L, 'a_p2')}\n{T(L, 'a_studio')}",
       ['wer', 'who are you', 'alessandro', 'noto', 'über', 'about', 'erfahrung', 'experience', 'gelernt', 'trained', 'foundation time', 'haarpigmentierer', 'ausbildung', 'training'],
       None, [S['kontakt']])
@@ -129,7 +129,7 @@ def bau(L):
     }
     for i in range(1, 7):
         F(f'f{i}', T(L, f'f{i}_q'), T(L, f'f{i}_a') + zusatz.get(i, ''), faq_kw[i],
-          [{'t': 'FAQ', 'h': '#faq'}] + ([{'t': 'Kostenlose Beratung' if de else 'Free consultation', 'h': '#kontakt'}] if i == 5 else []),
+          [{'t': 'FAQ', 'h': 'index.html#faq'}] + ([{'t': 'Kostenlose Beratung' if de else 'Free consultation', 'h': 'index.html#kontakt'}] if i == 5 else []),
           [S['ablauf'], S['kontakt']] if i != 4 else [S['risiken'], S['kontakt']])
     F('kontakt', S['kontakt'],
       f"{T(L, 'k_title')}\n{T(L, 'k_intro')}\n{T(L, 'k_phone')} {tel.group(2)}\nWhatsApp: {wa.replace('https://', '')}\n{T(L, 'k_mail')} {mail}\nStudio: {studio}\nInstagram: @{insta.rstrip('/').rsplit('/', 1)[-1]}",
@@ -172,7 +172,7 @@ def bau(L):
        if de else
        'With an inflamed scalp, e.g. from acne, eczema or psoriasis, pigmentation is generally not recommended while the inflammation is active. Please mention it in the free consultation.') + NOTE,
       ['schuppenflechte', 'psoriasis', 'ekzem', 'eczema', 'neurodermitis', 'akne', 'acne', 'hautkrankheit', 'skin condition', 'kopfhaut entzündet', 'inflamed', 'empfindliche haut', 'sensitive skin', 'keloid', 'wulstnarben'],
-      [{'t': 'Erstberatung' if de else 'Consultation', 'h': '#kontakt'}], [S['risiken'], S['kontakt']])
+      [{'t': 'Erstberatung' if de else 'Consultation', 'h': 'index.html#kontakt'}], [S['risiken'], S['kontakt']])
     F('mrt', 'MRT nach Pigmentierung?' if de else 'MRI after pigmentation?',
       ('Pigmente können Spuren von Metallen enthalten. Wenn bei dir ein MRT ansteht, gib der Praxis vorher kurz Bescheid, dass du eine Pigmentierung der Kopfhaut hast.'
        if de else 'Pigments may contain traces of metals. If you are due for an MRI, let the practice know beforehand that you have scalp pigmentation.'),
@@ -195,6 +195,7 @@ def bau(L):
       ['danke', 'dankeschön', 'thanks', 'thank', 'super', 'great', 'tschüss', 'bye'])
 
     return {
+        'relativZu': 'seite',
         'titel': 'Haarpigmentierung · Assistent' if de else 'Scalp pigmentation · Assistant',
         'begruessung': ('Hallo! Ich bin der automatische Assistent von Haarpigmentierung Emsland. Frag mich zu Methode, Ablauf, Kosten, Nachsorge oder Kontakt.'
                         if de else 'Hi! I am the automated assistant of Haarpigmentierung Emsland. Ask me about the method, process, cost, aftercare or contact.'),
