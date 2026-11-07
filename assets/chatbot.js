@@ -116,7 +116,7 @@
     return res;
   }
 
-  var GENERIC = { buch: 1, buecher: 1, buches: 1, titel: 1, autor: 1, autorin: 1, autoren: 1, verlag: 1, lesen: 1, empfehlung: 1, empfehlen: 1, empfiehlst: 1, thema: 1, themen: 1, ueber: 1 };
+  var GENERIC = { book: 1, books: 1, title: 1, titles: 1, author: 1, authors: 1, read: 1, recommend: 1, topic: 1, libro: 1, libros: 1, buch: 1, buecher: 1, buches: 1, titel: 1, autor: 1, autorin: 1, autoren: 1, verlag: 1, lesen: 1, empfehlung: 1, empfehlen: 1, empfiehlst: 1, thema: 1, themen: 1, ueber: 1 };
   function scoreBooks(qt, qn) {
     var words = qt.filter(function (t) { return !GENERIC[t]; });
     var res = [];
@@ -127,7 +127,7 @@
       if (b._an && (' ' + qn + ' ').indexOf(' ' + b._an + ' ') > -1) { s += 6; strong = true; }
       words.forEach(function (t) {
         var a = bestSim(t, b._t) * 4, c = bestSim(t, b._a) * 4, g = bestSim(t, b._g) * 3;
-        var sb = bestSim(t, b._s) * 2.5, d = (b._d.indexOf(t) > -1 ? 1.2 : 0);
+        var sb = bestSim(t, b._s) * 2.5, d = (t.length >= 4 && bestSim(t, b._d) >= 0.8 ? 1.2 : 0);
         var m = Math.max(a, c, g, sb, d);
         if (a >= 2.8 || c >= 2.8) strong = true;
         s += m;
