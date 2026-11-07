@@ -1,0 +1,71 @@
+/* Chat-Assistent Haarpigmentierung Emsland – Markenfarben Blau/Navy (Werte aus assets/styles.css) */
+.cb{--cb-font:"Inter",system-ui,sans-serif;--cb-title-font:600 1.12rem/1.2 "Playfair Display",Georgia,serif;
+  --cb-ink:#22234a;--cb-muted:#5e6280;--cb-bg:#ffffff;--cb-head-bg:#1b1c3d;--cb-head-ink:#ffffff;--cb-head-muted:#c9cbe0;
+  --cb-line:#dde6ef;--cb-bot-bg:#f2f7fb;--cb-card-bg:#ffffff;--cb-user-bg:#2b2c5a;--cb-user-ink:#ffffff;
+  --cb-accent:#0072a8;--cb-accent-line:#7cc5ea;--cb-accent-soft:#e3f3fb;--cb-sug-bg:#ffffff;
+  --cb-input-bg:#ffffff;--cb-input-line:#b9c6d6;--cb-focus:#009de2;
+  --cb-launch-bg:#2b2c5a;--cb-launch-ink:#ffffff;--cb-launch-line:#1b1c3d;
+  --cb-shadow:0 18px 44px -14px rgba(27,28,61,.4),0 2px 6px rgba(27,28,61,.1);--cb-radius:14px;--cb-z:80;
+  /* über dem runden WhatsApp-Knopf (unten rechts, 58 px) */
+  --cb-bottom:92px}
+.cb-head{border-bottom:3px solid #009de2}
+.cb-close{color:#ffffff}
+.cb-head .cb-close:focus-visible{outline-color:#7cc5ea}
+/* Chat-Assistent: Aufbau. Farben und Schriften stehen oben in .cb (Theme). */
+.cb{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(var(--cb-bottom,16px) + env(safe-area-inset-bottom));z-index:var(--cb-z,1000);font-family:var(--cb-font);font-size:15px;line-height:1.5;color:var(--cb-ink);display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none}
+.cb *{box-sizing:border-box}
+.cb-panel,.cb-head,.cb-log,.cb-sugs,.cb-form,.cb-msg,.cb-book{margin:0}
+.cb-panel{padding:0;max-width:none}
+.cb button,.cb input{margin:0;text-transform:none;letter-spacing:normal}
+.cb>*{pointer-events:auto}
+.cb-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.cb-launch{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 18px 0 15px;border-radius:999px;border:1px solid var(--cb-launch-line);background:var(--cb-launch-bg);color:var(--cb-launch-ink);font:600 15px/1 var(--cb-font);letter-spacing:.01em;cursor:pointer;box-shadow:var(--cb-shadow);transition:transform .18s ease,box-shadow .18s ease}
+.cb-launch:hover{transform:translateY(-2px)}
+.cb-launch:focus-visible,.cb button:focus-visible,.cb a:focus-visible,.cb-input:focus-visible,.cb-log:focus-visible{outline:3px solid var(--cb-focus);outline-offset:2px}
+.cb-open .cb-launch{padding:0 15px}
+.cb-open .cb-launch-t{display:none}
+.cb-ic{flex:none}
+.cb-panel{width:min(380px,calc(100vw - 32px));height:min(560px,calc(100vh - 120px));height:min(560px,calc(100dvh - 120px));display:flex;flex-direction:column;background:var(--cb-bg);border:1px solid var(--cb-line);border-radius:var(--cb-radius,16px);box-shadow:var(--cb-shadow);overflow:hidden;animation:cb-in .2s ease-out}
+.cb-panel[hidden]{display:none}
+@keyframes cb-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cb-head{display:flex;align-items:flex-start;gap:10px;padding:14px 14px 12px 18px;background:var(--cb-head-bg);color:var(--cb-head-ink);border-bottom:1px solid var(--cb-line)}
+.cb-head-t{flex:1;min-width:0}
+.cb-title{margin:0;font:var(--cb-title-font);color:var(--cb-head-ink);letter-spacing:.005em}
+.cb-note{margin:3px 0 0;font-size:12px;line-height:1.35;color:var(--cb-head-muted)}
+.cb-close{flex:none;width:36px;height:36px;display:grid;place-items:center;border:1px solid transparent;border-radius:10px;background:transparent;color:var(--cb-head-ink);cursor:pointer}
+.cb-close:hover{border-color:var(--cb-line)}
+.cb-log{position:relative;flex:1;overflow-y:auto;padding:16px 14px 6px;display:flex;flex-direction:column;gap:10px;overscroll-behavior:contain;scroll-behavior:smooth}
+.cb-msg{max-width:92%;padding:10px 13px;border-radius:14px;overflow-wrap:anywhere}
+.cb-msg p{margin:0}
+.cb-msg p+p{margin-top:6px}
+.cb-bot{align-self:flex-start;background:var(--cb-bot-bg);color:var(--cb-ink);border:1px solid var(--cb-line);border-bottom-left-radius:4px}
+.cb-user{align-self:flex-end;background:var(--cb-user-bg);color:var(--cb-user-ink);border-bottom-right-radius:4px}
+.cb-list{margin:6px 0 0;padding-left:18px}
+.cb-list li{margin:2px 0}
+.cb-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.cb-link{display:inline-flex;align-items:center;min-height:32px;padding:5px 11px;border-radius:999px;border:1px solid var(--cb-accent-line);color:var(--cb-accent);text-decoration:none;font-weight:600;font-size:13.5px;line-height:1.2}
+.cb-link:hover{background:var(--cb-accent-soft)}
+.cb-book{margin-top:9px;padding:9px 11px;border-radius:10px;background:var(--cb-card-bg);border:1px solid var(--cb-line)}
+.cb-book p{margin:0}
+.cb-book-t{font-weight:700;line-height:1.3}
+.cb-book-link{color:var(--cb-accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.cb-book-m{font-size:13px;color:var(--cb-muted);margin-top:2px!important}
+.cb-book-d{font-size:13.5px;margin-top:4px!important}
+.cb-book-f{font-size:12.5px;color:var(--cb-muted);margin-top:4px!important}
+.cb-sugs{display:flex;gap:6px;padding:8px 14px 4px;overflow-x:auto;scrollbar-width:thin}
+.cb-sugs:empty{display:none}
+.cb-sug{flex:none;min-height:34px;padding:6px 12px;border-radius:999px;border:1px solid var(--cb-accent-line);background:var(--cb-sug-bg);color:var(--cb-ink);font:500 13.5px/1.2 var(--cb-font);cursor:pointer;white-space:nowrap}
+.cb-sug:hover{background:var(--cb-accent-soft)}
+.cb-form{display:flex;gap:8px;padding:10px 12px 12px;border-top:1px solid var(--cb-line);background:var(--cb-bg)}
+.cb-input{flex:1;min-width:0;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--cb-input-line);background:var(--cb-input-bg);color:var(--cb-ink);font:16px/1.3 var(--cb-font)}
+.cb-input::placeholder{color:var(--cb-muted);opacity:1}
+.cb-send{flex:none;width:44px;height:44px;display:grid;place-items:center;border-radius:12px;border:0;background:var(--cb-launch-bg);color:var(--cb-launch-ink);cursor:pointer}
+@media (max-width:560px){
+  .cb{right:12px;left:12px;bottom:calc(var(--cb-bottom-m,var(--cb-bottom,16px)) + env(safe-area-inset-bottom))}
+  .cb-open{top:max(10px,env(safe-area-inset-top));bottom:calc(10px + env(safe-area-inset-bottom))}
+  .cb-panel{width:100%;flex:1;height:auto;min-height:0}
+  .cb-launch{min-height:52px}
+  .cb-open .cb-launch{display:none}
+}
+@media (prefers-reduced-motion:reduce){.cb-panel{animation:none}.cb-launch{transition:none}.cb-launch:hover{transform:none}.cb-log{scroll-behavior:auto}}
+@media print{.cb{display:none!important}}
