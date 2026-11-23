@@ -417,3 +417,19 @@ html.intro-on { overflow: hidden; }
 @media (max-width: 1240px) { .nav-links { gap: 14px; } .nav-links a:not(.btn) { font-size: .88rem; } .nav-right { gap: 14px; } }
 .hero .lead strong { color: #fff; }
 .nav { gap: 24px; } @media (max-width: 1240px) and (min-width: 861px) { .logo img { height: 34px; } }
+/* Vergleich: nichts darf über den Rand ragen */
+.vs-row > * { min-width: 0; }
+.vs-cell, .vs-tag, .vs-label { overflow-wrap: anywhere; hyphens: auto; }
+@media (max-width: 420px) {
+  .vs-row { gap: 8px; }
+  .vs-cell { padding: 12px 10px; font-size: .84rem; }
+  .vs-tag { font-size: .6rem !important; letter-spacing: .02em !important; }
+}
+
+/* Studio-Foto im Kontakt */
+.studio-img { margin: 26px 0 0; max-width: 480px; }
+.studio-img img { width: 100%; aspect-ratio: 4/3; object-fit: cover; box-shadow: 0 12px 30px rgba(34,35,74,.12); }
+.studio-img figcaption { font-size: .9rem; color: var(--muted); margin-top: 10px; }
+/* Kennzahlen: Zahl nicht umbrechen */
+.stat span { white-space: nowrap; }
+@media (max-width: 420px) { .stat span { font-size: 1.8rem; } .stat { padding: 20px 14px; } }

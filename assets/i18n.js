@@ -2,6 +2,7 @@
 // Schlüssel = data-i18n-Attribut im HTML.
 window.I18N = {
   en: {
+    k_studio_cap: "Find us at the “Tattoo &amp; Beyond – sieben vier null” studio, Burgstraße 12 in the centre of Lingen.",
     nav_alt: "Instead of surgery",
     v_eyebrow: "An alternative to a hair transplant",
     v_title: "A full-looking head of hair – no surgery, no scars",
@@ -142,6 +143,7 @@ window.I18N = {
   },
 
   tr: {
+    k_studio_cap: "Bizi Lingen şehir merkezinde, Burgstraße 12’deki “Tattoo &amp; Beyond – sieben vier null” stüdyosunda bulabilirsiniz.",
     nav_alt: "Ameliyat yerine",
     v_eyebrow: "Saç ekimine alternatif",
     v_title: "Ameliyatsız ve izsiz gür bir görünüm",
@@ -282,6 +284,7 @@ window.I18N = {
   },
 
   ar: {
+    k_studio_cap: "تجدنا في استوديو “Tattoo &amp; Beyond – sieben vier null”، Burgstraße 12 في وسط مدينة لينغن.",
     nav_alt: "بدلًا من الجراحة",
     v_eyebrow: "بديل لزراعة الشعر",
     v_title: "مظهر شعر كثيف – بلا جراحة وبلا ندوب",
