@@ -433,3 +433,8 @@ html.intro-on { overflow: hidden; }
 /* Kennzahlen: Zahl nicht umbrechen */
 .stat span { white-space: nowrap; }
 @media (max-width: 420px) { .stat span { font-size: 1.8rem; } .stat { padding: 20px 14px; } }
+/* Chat-Knopf auf dem Handy: rundes Symbol wie WhatsApp, verdeckt weniger Text */
+@media (max-width: 860px) {
+  .cb-launch { width: 52px; min-height: 52px !important; padding: 0 !important; justify-content: center; border-radius: 50%; }
+  .cb-launch .cb-launch-t { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
